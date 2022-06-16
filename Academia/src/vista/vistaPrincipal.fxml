@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.vistaPrincipalController">
+   <children>
+      <Pane prefHeight="576.0" prefWidth="181.0" style="-fx-background-color: #23272a;">
+         <children>
+            <Circle fill="WHITE" layoutX="90.0" layoutY="64.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="81.0" fitWidth="82.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/vector-users-icon.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="31.0" layoutY="145.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: none;" text="Inicio sesion" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="31.0" layoutY="211.0" mnemonicParsing="false" onMouseClicked="#registro" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: none;" text="Registrarme" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="31.0" layoutY="274.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: none;" text="Contactanos" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Line endX="82.0" layoutX="81.0" layoutY="202.0" startX="-62.5" stroke="#7289da" />
+            <Line endX="82.0" layoutX="88.0" layoutY="265.0" startX="-62.5" stroke="#7289da" />
+            <Line endX="54.0" layoutX="74.0" layoutY="327.0" startX="-22.0" stroke="#7289da" />
+         </children>
+      </Pane>
+      <Pane layoutX="181.0" prefHeight="110.0" prefWidth="679.0" style="-fx-background-color: #2c2f33;">
+         <children>
+            <Text fill="WHITE" layoutX="265.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High School">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="97.0" fitWidth="105.0" layoutX="168.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/vector-users-icon.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="181.0" layoutY="514.0" prefHeight="62.0" prefWidth="679.0" style="-fx-background-color: #99aab5;">
+         <children>
+            <Text fill="WHITE" layoutX="248.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dev group, Copyright © 2022">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Line endX="615.0" layoutX="245.0" layoutY="110.0" startX="-62.5" stroke="#7289da" strokeWidth="5.0" />
+      <Pane layoutX="181.0" layoutY="110.0" prefHeight="401.0" prefWidth="679.0">
+         <children>
+            <Pane layoutX="48.0" layoutY="114.0" prefHeight="193.0" prefWidth="166.0" style="-fx-background-color: #ddd; -fx-border-radius: 20%;">
+               <children>
+                  <ImageView fitHeight="123.0" fitWidth="166.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/vector-users-icon.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#5b5b5b" layoutX="7.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permitenos conocer tu experiencia en nuestro portal web" textAlignment="CENTER" wrappingWidth="152.19140625" />
+               </children>
+            </Pane>
+            <Pane layoutX="257.0" layoutY="114.0" prefHeight="193.0" prefWidth="166.0" style="-fx-background-color: #ddd;">
+               <children>
+                  <ImageView fitHeight="123.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/vector-users-icon.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#5b5b5b" layoutX="13.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aprendizaje permanente: consolidado el desarrollo personal y/o profesional" wrappingWidth="139.1484375" />
+               </children>
+            </Pane>
+            <Pane layoutX="464.0" layoutY="114.0" prefHeight="193.0" prefWidth="166.0" style="-fx-background-color: #ddd;">
+               <children>
+                  <ImageView fitHeight="123.0" fitWidth="164.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/vector-users-icon.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#5b5b5b" layoutX="19.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convocatorias: Enterate y postulate" textAlignment="CENTER" wrappingWidth="127.931640625" />
+               </children>
+            </Pane>
+            <Pane layoutX="184.0" layoutY="20.0" prefHeight="62.0" prefWidth="312.0">
+               <children>
+                  <Text fill="#7289da" layoutX="25.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREAMOS" wrappingWidth="118.99999938905239">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="144.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EXPERIENCIAS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>
