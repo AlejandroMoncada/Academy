@@ -1,4 +1,4 @@
-package modelo;
+package controlador;
 
 
 import javafx.application.Application;
