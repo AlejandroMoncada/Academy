@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="857.0" style="-fx-background-color: #1e2124;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.registerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="857.0" style="-fx-background-color: #1e2124;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.registerController">
    <children>
       <Text fx:id="txtEntrada" layoutX="295.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0">
          <font>
@@ -51,7 +51,7 @@
       </Pane>
       <ImageView fitHeight="592.0" fitWidth="386.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/Banner%202.png" />
+            <Image url="@../img/Banner.png" />
          </image>
       </ImageView>
       <Line endX="212.0" layoutX="640.0" startX="-268.0" stroke="#7289da" strokeWidth="10.0" />
