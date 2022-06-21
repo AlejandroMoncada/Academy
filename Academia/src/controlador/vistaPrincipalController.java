@@ -13,12 +13,12 @@ public class vistaPrincipalController {
 	@FXML
 	void registro(MouseEvent event)  throws IOException{
 		  try{
-	            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/registro.fxml"));
+	            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/registroo.fxml"));
 	            
 	            Parent root = loader.load();
 	            Scene scene = new Scene(root);
 	            Stage teatro = new Stage();
-	            teatro.setTitle("Clientes");
+	            teatro.setTitle("Registrate");
 	            teatro.setScene(scene);
 	            teatro.show();
 	            
