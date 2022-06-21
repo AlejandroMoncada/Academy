@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.vistaPrincipalController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.vistaPrincipalController">
    <children>
       <Pane prefHeight="576.0" prefWidth="181.0" style="-fx-background-color: #23272a;">
          <children>
@@ -46,7 +46,11 @@
             </Text>
             <ImageView fitHeight="97.0" fitWidth="105.0" layoutX="168.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
+<<<<<<< HEAD
                   <Image url="@../img/High%20School.png" />
+=======
+                  <Image url="@../images/logoHighschool.png" />
+>>>>>>> f406ad74639574a2691705f3f061697bcc303b05
                </image>
             </ImageView>
          </children>
@@ -67,7 +71,11 @@
                <children>
                   <ImageView fitHeight="123.0" fitWidth="166.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
+<<<<<<< HEAD
                         <Image url="@../img/Screenshot_2.png" />
+=======
+                        <Image url="@../images/Screenshot_2.png" />
+>>>>>>> f406ad74639574a2691705f3f061697bcc303b05
                      </image>
                   </ImageView>
                   <Text fill="#5b5b5b" layoutX="7.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permitenos conocer tu experiencia en nuestro portal web" textAlignment="CENTER" wrappingWidth="152.19140625" />
@@ -77,7 +85,11 @@
                <children>
                   <ImageView fitHeight="123.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
                      <image>
+<<<<<<< HEAD
                         <Image url="@../img/Screenshot_3.png" />
+=======
+                        <Image url="@../images/Screenshot_3.png" />
+>>>>>>> f406ad74639574a2691705f3f061697bcc303b05
                      </image>
                   </ImageView>
                   <Text fill="#5b5b5b" layoutX="13.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aprendizaje permanente: consolidado el desarrollo personal y/o profesional" wrappingWidth="139.1484375" />
@@ -87,7 +99,11 @@
                <children>
                   <ImageView fitHeight="123.0" fitWidth="164.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
+<<<<<<< HEAD
                         <Image url="@../img/Screenshot_1.png" />
+=======
+                        <Image url="@../images/Screenshot_1.png" />
+>>>>>>> f406ad74639574a2691705f3f061697bcc303b05
                      </image>
                   </ImageView>
                   <Text fill="#5b5b5b" layoutX="19.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convocatorias: Enterate y postulate" textAlignment="CENTER" wrappingWidth="127.931640625" />
