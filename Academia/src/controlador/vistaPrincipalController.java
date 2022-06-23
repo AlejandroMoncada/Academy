@@ -28,4 +28,23 @@ public class vistaPrincipalController {
 	    }
 	    
 	}
+	@FXML
+	void login(MouseEvent event)  throws IOException{
+		  try{
+	            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/login.fxml"));
+	            
+	            Parent root = loader.load();
+	            Scene scene = new Scene(root);
+	            Stage teatro = new Stage();
+	            teatro.setTitle("Registrate");
+	            teatro.setScene(scene);
+	            teatro.show();
+	            
+	        }catch(IOException e){
+	            e.printStackTrace();
+	        
+	    }
+	    
+	}
+	
 }
