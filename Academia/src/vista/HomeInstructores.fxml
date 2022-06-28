@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="857.0" style="-fx-background-color: #1e2124;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="857.0" style="-fx-background-color: #1e2124;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LoginController">
    <children>
-      <Pane prefHeight="110.0" prefWidth="857.0" style="-fx-background-color: #282b30;">
+      <Pane layoutX="200.0" prefHeight="109.0" prefWidth="657.0" style="-fx-background-color: #282b30;">
          <children>
-            <Button layoutX="726.0" layoutY="43.0" mnemonicParsing="false" text="Salir de sesion" />
+            <Text fill="WHITE" layoutX="265.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High School">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="97.0" fitWidth="105.0" layoutX="158.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logoHighschool.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
-      <Button layoutX="23.0" layoutY="154.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Ver mis cursos" />
-      <Button layoutX="27.0" layoutY="206.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" text="Crear cursos" />
+      <Line endX="519.0" endY="-2.0" layoutX="338.0" layoutY="111.0" startX="-139.5" startY="-2.0" stroke="#7289da" strokeWidth="5.0" />
+      <Pane layoutY="-1.0" prefHeight="592.0" prefWidth="200.0" style="-fx-background-color: #23272a;">
+         <children>
+            <Button layoutX="25.0" layoutY="160.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #7289da;" text="Ver mis cursos" textFill="WHITE" />
+            <Button layoutX="25.0" layoutY="217.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #7289da;" text="Crear cursos" textFill="WHITE" />
+            <Circle fill="WHITE" layoutX="100.0" layoutY="63.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="81.0" fitWidth="82.0" layoutX="60.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/user.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="28.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" style="-fx-background-color: #7289da;" text="Salir de sesion" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Line endX="-148.0" endY="478.0" layoutX="348.0" layoutY="113.0" startX="-148.0" startY="-4.0" stroke="#7289da" strokeWidth="5.0" />
+      <Pane layoutX="198.0" layoutY="109.0" prefHeight="53.0" prefWidth="193.0" style="-fx-background-color: #7289da;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido Instructor">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text fill="WHITE" layoutX="440.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTICIAS DEL DIA">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
