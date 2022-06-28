@@ -38,6 +38,7 @@ public class vistaPrincipalController {
 	            Stage teatro = new Stage();
 	            teatro.setTitle("Registrate");
 	            teatro.setScene(scene);
+				
 	            teatro.show();
 	            
 	        }catch(IOException e){

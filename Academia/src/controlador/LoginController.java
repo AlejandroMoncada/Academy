@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import modelo.Conexion;
 
@@ -31,7 +32,7 @@ public class LoginController {
     private Button loginButton;
 
     @FXML
-    private TextField labelMsg;
+    private Text labelMsg;
 
     Connection con = null;
     PreparedStatement preparedStatement = null;
@@ -45,9 +46,12 @@ public class LoginController {
         Conexion conect = new Conexion();
         conect.conectar();
         if(conect.isConectado()){
-            String query = "SELECT id FROM personas WHERE email ='"+login+"'AND pw = '"+clave+"'";            
-            try(Statement stm = conect.getCon().createStatement()){                
+            String query = "SELECT id FROM personas WHERE email ='"+login+"'AND pw = '"+clave+"'";
+            
+            try(Statement stm = conect.getCon().createStatement()){    
+                ResultSet rst2 = stm.executeQuery("SELECT * FROM personas WHERE email ='"+login+"'AND pw = '"+clave+"'");            
                 ResultSet rst = stm.executeQuery(query);
+                
                 if(rst.next()){
                     
                     //System.out.println("entra");
@@ -56,7 +60,20 @@ public class LoginController {
                     Stage stage = (Stage) loginButton.getScene().getWindow();
                     stage.close();
                     //Crear la nueva ventana
+                    
                     System.out.println("inicio de sesion exitoso");
+
+                    
+                    
+                    // System.out.println(rst2.getInt("tipo"));
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/HomeInstructores.fxml"));
+                    Parent root = loader.load();
+                    Scene scene = new Scene(root);
+                    Stage teatro = new Stage();
+                    teatro.setTitle("Bienvenido");
+                    teatro.setScene(scene);
+                    teatro.show();
                     //Scene scene = new Scene(root);
                     //stage = new Stage();
                     //stage.close();
@@ -65,7 +82,7 @@ public class LoginController {
                     //FXMLHomeController data = (FXMLHomeController)loader.getController();
                     //data.setBienvenidoLbl("Hola : "+login+" Bienvenido.");
                     
-                    stage.show();
+                    stage.close();
                     conect.desconectar();
                 }
                 else{

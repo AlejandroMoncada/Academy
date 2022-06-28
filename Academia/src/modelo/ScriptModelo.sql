@@ -1,7 +1,7 @@
 
 
 create table tiposPersona(
-id INT PRIMARY KEY auto_increment,
+id INT PRIMARY KEY ,
 nombre char(30)
 );
 

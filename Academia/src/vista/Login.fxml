@@ -41,6 +41,11 @@
             </TextField>
             <Line endX="95.0" layoutX="200.0" layoutY="156.0" startX="-100.0" stroke="#7289da" />
             <Button fx:id="loginButton" layoutX="106.0" layoutY="224.0" mnemonicParsing="false" onAction="#ingresarBtn" prefHeight="30.0" prefWidth="183.0" style="-fx-background-color: #7289da;" text="Inicia Sesion" textFill="WHITE" />
+            <Text fx:id="labelMsg" fill="RED" layoutX="85.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="230.13671875">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
       <Pane layoutX="69.0" prefHeight="82.0" prefWidth="724.0" style="-fx-background-color: #282b30;">
