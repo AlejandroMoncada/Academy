@@ -1,14 +1,19 @@
 package controlador;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import modelo.Conexion;
 
 public class registerController {
@@ -42,7 +47,7 @@ public class registerController {
 	private Text txtEntrada;
 	
 	@FXML
-	void registrarse(MouseEvent event) throws SQLException{
+	void registrarse(MouseEvent event) throws SQLException, IOException{
 		
 			String inpId = inputId.getText();
 			String inpName = inputName.getText();
@@ -71,10 +76,49 @@ public class registerController {
 					String query = "INSERT into personas (id,nombre,apellido,email,edad,pw,tipo) values ('"+inpId+"','"+inpName+"','"+inpLastName+"','"+inpEmail+"','"+inpAge+"','"+inpPassword+"','"+1+"')";
 					con.conectar();
 					Answer(query);
+				    
+                    //System.out.println("entra");
+                    //Cerrrar la ventana anterior
+                    //System.out.println("btnIngr: "+btnIngr);
+                    Stage stage = (Stage) btnRegister.getScene().getWindow();
+                    stage.close();
+                    //Crear la nueva ventana
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/HomeInstructores.fxml"));
+                    Parent root = loader.load();
+                    Scene scene = new Scene(root);
+                    stage = new Stage();
+                    //stage.close();
+                    stage.setTitle("Home - Instructores");
+                    stage.setScene(scene);
+                    //FXMLHomeController data = (FXMLHomeController)loader.getController();
+                    //data.setBienvenidoLbl("Hola : "+login+" Bienvenido.");
+                    
+                    stage.show();
+                    con.desconectar();
+                    
 		    	}else if(cmbType == "Aprendiz"){
 		    		String query = "INSERT into personas (id,nombre,apellido,email,edad,pw,tipo) values ('"+inpId+"','"+inpName+"','"+inpLastName+"','"+inpEmail+"','"+inpAge+"','"+inpPassword+"','"+0+"')";
 					con.conectar();
 					Answer(query);
+					
+					 //System.out.println("entra");
+                    //Cerrrar la ventana anterior
+                    //System.out.println("btnIngr: "+btnIngr);
+                    Stage stage = (Stage) btnRegister.getScene().getWindow();
+                    stage.close();
+                    //Crear la nueva ventana
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/HomeApredizes.fxml"));
+                    Parent root = loader.load();
+                    Scene scene = new Scene(root);
+                    stage = new Stage();
+                    //stage.close();
+                    stage.setTitle("Home - Aprendices");
+                    stage.setScene(scene);
+                    //FXMLHomeController data = (FXMLHomeController)loader.getController();
+                    //data.setBienvenidoLbl("Hola : "+login+" Bienvenido.");
+                    
+                    stage.show();
+                    con.desconectar();
 		    	}
 		    }
 		}	

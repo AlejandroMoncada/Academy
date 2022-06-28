@@ -46,10 +46,8 @@ public class LoginController {
         Conexion conect = new Conexion();
         conect.conectar();
         if(conect.isConectado()){
-            String query = "SELECT id FROM personas WHERE email ='"+login+"'AND pw = '"+clave+"'";
-            
-            try(Statement stm = conect.getCon().createStatement()){    
-                ResultSet rst2 = stm.executeQuery("SELECT * FROM personas WHERE email ='"+login+"'AND pw = '"+clave+"'");            
+            String query = "SELECT id FROM personas WHERE email ='"+login+"'AND pw = '"+clave+"' AND tipo = '"+0+"'";
+            try(Statement stm = conect.getCon().createStatement()){        
                 ResultSet rst = stm.executeQuery(query);
                 
                 if(rst.next()){
@@ -61,10 +59,55 @@ public class LoginController {
                     stage.close();
                     //Crear la nueva ventana
                     
-                    System.out.println("inicio de sesion exitoso");
+                    System.out.println("inicio de sesion exitoso de APRENDIZ");
 
                     
                     
+                    // System.out.println(rst2.getInt("tipo"));
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/HomeApredizes.fxml"));
+                    Parent root = loader.load();
+                    Scene scene = new Scene(root);
+                    Stage teatro = new Stage();
+                    teatro.setTitle("Bienvenido");
+                    teatro.setScene(scene);
+                    teatro.show();
+                    //Scene scene = new Scene(root);
+                    //stage = new Stage();
+                    //stage.close();
+                    //stage.setTitle("Inicio");
+                    //stage.setScene(scene);
+                    //FXMLHomeController data = (FXMLHomeController)loader.getController();
+                    //data.setBienvenidoLbl("Hola : "+login+" Bienvenido.");
+                    
+                    stage.close();
+                    conect.desconectar();
+                }else{
+                    labelMsg.setText("Usuario o Clave no validos");
+                }
+            }catch (Exception e) {
+                System.out.println("ERROR: Aborting...");
+                e.printStackTrace();
+            }
+        }
+        
+        if(conect.isConectado()){
+        	  String query = "SELECT id FROM personas WHERE email ='"+login+"'AND pw = '"+clave+"' AND tipo = '"+1+"'";
+           
+            
+            try(Statement stm = conect.getCon().createStatement()){        
+                ResultSet rst = stm.executeQuery(query);
+                
+                if(rst.next()){
+                    
+                    //System.out.println("entra");
+                    //Cerrrar la ventana anterior
+                    //System.out.println("btnIngr: "+btnIngr);
+                    Stage stage = (Stage) loginButton.getScene().getWindow();
+                    stage.close();
+                    //Crear la nueva ventana
+                    
+                    System.out.println("inicio de sesion exitoso de INSTRUCTOR");
                     // System.out.println(rst2.getInt("tipo"));
 
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/HomeInstructores.fxml"));
@@ -84,8 +127,7 @@ public class LoginController {
                     
                     stage.close();
                     conect.desconectar();
-                }
-                else{
+                }else{
                     labelMsg.setText("Usuario o Clave no validos");
                 }
             }catch (Exception e) {
@@ -93,5 +135,8 @@ public class LoginController {
                 e.printStackTrace();
             }
         }
+        
+      
+        
     }
 }
