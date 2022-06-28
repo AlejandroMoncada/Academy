@@ -55,5 +55,30 @@
             <Font size="24.0" />
          </font>
       </Text>
+      <Pane layoutX="336.0" layoutY="266.0" prefHeight="250.0" prefWidth="399.0" style="-fx-border-style: solid; -fx-border-color: #7289da;">
+         <children>
+            <ImageView fitHeight="257.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Podcast.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="264.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo podcast">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#7289da" layoutX="292.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Episodio 3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="273.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Talento Humano UdeMedellín 09 de junio de 2022 " wrappingWidth="103.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="#7289da" layoutX="324.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High School" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
