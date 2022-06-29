@@ -37,6 +37,7 @@ public class LoginController {
     Connection con = null;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
+    inscripcionCursos cursos = new inscripcionCursos();
 
     @FXML
     
@@ -47,10 +48,14 @@ public class LoginController {
         conect.conectar();
         if(conect.isConectado()){
             String query = "SELECT id FROM personas WHERE email ='"+login+"'AND pw = '"+clave+"' AND tipo = '"+0+"'";
+           
             try(Statement stm = conect.getCon().createStatement()){        
                 ResultSet rst = stm.executeQuery(query);
-                
                 if(rst.next()){
+                	
+                	int idLogueado = rst.getInt("id");
+                	
+                	
                     
                     //System.out.println("entra");
                     //Cerrrar la ventana anterior

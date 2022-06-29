@@ -40,15 +40,70 @@ public class inscripcionCursos {
 	private Button btnCurso;
 	
 	@FXML
-	void ComboBox(MouseEvent event) throws SQLException, IOException{
-		System.out.println("OLA");
+	private Text txtEntrada;
+	
+	@FXML
+	void buscar(MouseEvent event) throws SQLException, IOException{
+		  String combo = cmbCurso.getValue();
+		    if (combo==null || combo.isEmpty()) {
+		        txtEntrada.setText("Seleccione un curso a buscar");
+		    }
+		    else{
+		    	conect.conectar();
+		        try(Statement stm = conect.getCon().createStatement()){
+		            String nombreCurso = cmbCurso.getValue();
+		            ResultSet rta = stm.executeQuery("SELECT c.nombre, hr.fechaEntrada, hr.fechaSalida, hr.horaEntrada, hr.horaSalida, e.nombre FROM cursos as c JOIN horarios as hr JOIN estados as e WHERE c.horario = hr.id AND c.estado = e.id AND c.nombre = '"+nombreCurso+"';");
+		            if(rta.next()){
+		            	hrsInicio.setText(rta.getString("horaEntrada"));
+		            	hrsFinal.setText(rta.getString("horaSalida"));
+		            	fechaInicio.setText(rta.getString("fechaEntrada"));
+		            	fechaFinal.setText(rta.getString("fechaSalida"));
+		            	cmbCurso.setValue(rta.getString("c.nombre"));
+		            	estado.setText(rta.getString("e.nombre"));
+		            	String estadoCurso = estado.getText();
+		            	
+		            	System.out.println(estadoCurso);
+		            	System.out.println("Antes del if");
+		                if(estadoCurso.equalsIgnoreCase("Cerrado")){
+		                	System.out.println("dentro del if");
+		                	 btnCurso.setDisable(true);
+		                } else {
+		                	 btnCurso.setDisable(false);
+		                }
+		                System.out.println("fuera del if");
+		            }
+		            else
+		                txtEntrada.setText("No se encontro registro que coincida con la identificación");
+		        }
+		        conect.desconectar();
+		    }
+		
+	}
+	
+	@FXML
+	void btnInscripcion(MouseEvent event) throws SQLException, IOException{
+		//String query = "SELECT id FROM cursos where id == '"+cmbCurso+"';";
+		conect.conectar();
+		 try(Statement stm = conect.getCon().createStatement()){
+			 String nombreCurso = cmbCurso.getValue();
+			 ResultSet rta = stm.executeQuery("SELECT id FROM cursos where nombre = '"+nombreCurso+"';");
+			 if(rta.next()) {
+				 int idcurso = rta.getInt("id");
+				 int idpersona = 1;
+				 ResultSet rt = stm.executeQuery("INSERT into personas_cursos (persona,curso) values ("+idpersona+","+idcurso+");");
+				 if(rt.next()) {
+					 
+				 }
+			 }
+			 
+		 }
+		
 	}
 	
 	
 	@FXML
 	void initialize() throws SQLException {
    //Declaro variable
-        
         ResultSet rst;
         //Conectarme a la base de datos        
         conect.conectar();

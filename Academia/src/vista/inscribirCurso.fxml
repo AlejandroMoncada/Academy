@@ -2,13 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="860.0" style="-fx-background-color: #7289da;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.inscripcionCursos">
    <children>
-      <ComboBox fx:id="cmbCurso" layoutX="297.0" layoutY="65.0" onMouseClicked="#ComboBox" prefHeight="36.0" prefWidth="253.0" />
+      <ComboBox fx:id="cmbCurso" layoutX="297.0" layoutY="65.0" prefHeight="36.0" prefWidth="253.0" />
       <Text layoutX="347.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione el curso">
          <font>
             <Font size="20.0" />
@@ -24,7 +26,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="btnCurso" layoutX="345.0" layoutY="453.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="158.0" text="Inscribete " />
+      <Button fx:id="btnCurso" layoutX="345.0" layoutY="453.0" mnemonicParsing="false" onMouseClicked="#btnInscripcion" prefHeight="43.0" prefWidth="158.0" text="Inscribete " />
       <Text layoutX="92.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hora Final:">
          <font>
             <Font size="18.0" />
@@ -35,22 +37,22 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fx:id="hrsInicio" layoutX="206.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2022-01-01" wrappingWidth="112.34765625">
+      <Text fx:id="hrsInicio" layoutX="206.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="112.34765625">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <Text fx:id="hrsFinal" layoutX="206.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2022-01-01" wrappingWidth="112.34765625">
+      <Text fx:id="hrsFinal" layoutX="206.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="112.34765625">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <Text fx:id="fechaInicio" layoutX="647.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="06:00:00" wrappingWidth="112.34765625">
+      <Text fx:id="fechaInicio" layoutX="647.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="112.34765625">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <Text fx:id="fechaFinal" layoutX="647.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="06:00:00" wrappingWidth="112.34765625">
+      <Text fx:id="fechaFinal" layoutX="647.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="112.34765625">
          <font>
             <Font size="17.0" />
          </font>
@@ -60,7 +62,17 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fx:id="estado" layoutX="437.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscripciones Abiertas" wrappingWidth="177.34765625">
+      <Text fx:id="estado" layoutX="437.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="177.34765625">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="557.0" layoutY="65.0" onMouseClicked="#buscar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/lupa.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="txtEntrada" layoutX="333.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="193.59033203125">
          <font>
             <Font size="17.0" />
          </font>
