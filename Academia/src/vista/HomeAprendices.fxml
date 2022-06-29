@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="857.0" style="-fx-background-color: #1e2124;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="857.0" style="-fx-background-color: #1e2124;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.aprendizHome">
    <children>
       <Pane layoutX="201.0" prefHeight="110.0" prefWidth="655.0" style="-fx-background-color: #282b30;">
          <children>
@@ -29,7 +29,7 @@
       <Pane prefHeight="592.0" prefWidth="200.0" style="-fx-background-color: #23272a;">
          <children>
             <Button layoutX="25.0" layoutY="160.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #7289da;" text="Ver mis cursos" textFill="WHITE" />
-            <Button layoutX="25.0" layoutY="217.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #7289da;" text="Inscribirme" textFill="WHITE" />
+            <Button fx:id="btnInscripcion" layoutX="25.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#inscribirme" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #7289da;" text="Inscribirme" textFill="WHITE" />
             <Circle fill="WHITE" layoutX="100.0" layoutY="63.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
             <ImageView fitHeight="81.0" fitWidth="82.0" layoutX="60.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>

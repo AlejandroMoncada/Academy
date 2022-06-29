@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import modelo.Conexion;
 
 public class GestionCursos {
@@ -32,7 +33,7 @@ public class GestionCursos {
     private Button buscarImg;
 
     @FXML
-    private TextField txtEntrada;
+    private Text txtEntrada;
 
     @FXML
     private TextField txtName;
@@ -83,7 +84,7 @@ public class GestionCursos {
                     }
                     btnBorrar.setDisable(false);
                     btntActualizar.setDisable(false);
-                    txtEntrada.clear();
+                    txtEntrada.setText("");
                 }
                 else
                     txtEntrada.setText("No se encontro registro que coincida con la identificación");
@@ -214,7 +215,7 @@ public class GestionCursos {
         cmbEstado.setValue("Inscripciones abiertas");
 
         cmbHorario.getItems().clear();
-        cmbHorario.getItems().addAll("Mañana", "Tarde","Noche");
+        cmbHorario.getItems().addAll("Ma�ana", "Tarde","Noche");
         cmbHorario.setValue("Mañana");
     }
 

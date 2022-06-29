@@ -107,7 +107,7 @@ public class registerController {
                     Stage stage = (Stage) btnRegister.getScene().getWindow();
                     stage.close();
                     //Crear la nueva ventana
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/HomeApredizes.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/HomeAprendices.fxml"));
                     Parent root = loader.load();
                     Scene scene = new Scene(root);
                     stage = new Stage();

@@ -65,7 +65,7 @@ public class LoginController {
                     
                     // System.out.println(rst2.getInt("tipo"));
 
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/HomeApredizes.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/HomeAprendices.fxml"));
                     Parent root = loader.load();
                     Scene scene = new Scene(root);
                     Stage teatro = new Stage();
